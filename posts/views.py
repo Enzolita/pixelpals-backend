@@ -8,6 +8,9 @@ from pixelpals_backend.permissions import IsOwnerOrReadOnly
 
 
 class PostList(APIView):
+    """
+    List posts or create a post if logged in
+    """
     serializer_class = PostSerializer
     permission_classes = [
         permissions.IsAuthenticatedOrReadOnly
@@ -35,6 +38,9 @@ class PostList(APIView):
 
 
 class PostDetail(APIView):
+    """
+    Retrieve a post and edit or delete it if you own it
+    """
     permission_classes = [IsOwnerOrReadOnly]
     serializer_class = PostSerializer
 
@@ -46,12 +52,13 @@ class PostDetail(APIView):
         except Post.DoesNotExist:
             raise Http404
 
-    def get (self, request, pk):
-        post = self.get_object(pk)        
+    def get(self, request, pk):
+        post = self.get_object(pk)
         serializer = PostSerializer(
             post, context={'request': request}
         )
         return Response(serializer.data)
+
     def put(self, request, pk):
         post = self.get_object(pk)
         serializer = PostSerializer(
