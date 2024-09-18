@@ -1,10 +1,28 @@
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-Welcome USER_NAME,
+Welcome Elena Hanna,
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **June 18, 2024**
+# PixelPals Backend API
+
+Welcome to the **PixelPals** Backend API! This API powers **PixelPals**, a platform where users can share, like, and comment on pixel art, much like Instagram but with a creative pixelated twist.
+
+The backend API manages all the core operations of the PixelPals platform, including user authentication, posting and managing pixel art creations, and social interactions such as following other users, liking posts, and leaving comments. Whether you're looking to integrate with the PixelPals frontend or extend its functionality, this documentation will guide you through the setup, endpoints, and usage.
+
+## Key Features
+- **User Authentication & Profiles**: Secure user registration, login, and profile management using JWT.
+- **Pixel Art Posts**: Endpoints to create, update, and delete pixel art posts, including image uploads and captions.
+- **Social Features**: Like, comment, and follow functionality to interact with posts and users.
+- **Feed Management**: View your personalized feed based on followed users and interactions.
+- **Explore & Discover**: Explore trending pixel art from across the platform.
+
+---
+
+
+
+
+
+
 
 ## Gitpod Reminders
 
