@@ -60,7 +60,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEV' in os.environ
 
-ALLOWED_HOSTS = ['localhost', 'pixelpals-backend.herokuapp.com']
+ALLOWED_HOSTS = ["pixelpals-backend-49bb71efec81.herokuapp.com"]
 
 
 # Application definition
