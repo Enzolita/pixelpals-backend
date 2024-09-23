@@ -45,6 +45,7 @@ REST_USE_JWT = True
 JWT_AUTH_SECURE = True
 JWT_AUTH_COOKIE = 'my-app-auth'
 JWT_AUTH_REFRESH_COOKIE = 'my-refresh-token'
+JWT_AUTH_SAMESITE = 'None'
 
 REST_AUTH_SERIALIZERS = {
     'USER_DETAILS_SERIALIZER': 'pixelpals_backend.serializers.CurrentUserSerializer'
@@ -54,12 +55,12 @@ REST_AUTH_SERIALIZERS = {
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-)@*4duc0%^qsi7370x%g)_hw@_jgv@2@(f*z56uhj36m!1p2-d'
+SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = 'DEV' in os.environ
 
-ALLOWED_HOSTS = ['8000-enzolita-pixelpalsbacke-fagxslbmqhy.ws.codeinstitute-ide.net']
+ALLOWED_HOSTS = ['localhost', 'pixelpals-backend.herokuapp.com']
 
 
 # Application definition
@@ -82,6 +83,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'dj_rest_auth.registration',
+    'corsheaders',
 
     'profiles',
     'posts',
@@ -92,6 +94,7 @@ INSTALLED_APPS = [
 SITE_ID = 1
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -100,6 +103,18 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+if 'CLIENT_ORIGIN' in os.environ:
+    CORS_ALLOWED_ORIGINS = [
+        os.environ.get('CLIENT_ORIGIN')
+    ]
+
+if 'CLIENT_ORIGIN_DEV' in os.environ:
+    CORS_ALLOWED_ORIGIN_REGEXES = [
+        os.environ.get('CLIENT_ORIGIN_DEV')
+    ]
+
+CORS_ALLOW_CREDENTIALS = True
 
 ROOT_URLCONF = 'pixelpals_backend.urls'
 
@@ -176,6 +191,8 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+#CORS SETTINGS
 
 
 # Static files (CSS, JavaScript, Images)
