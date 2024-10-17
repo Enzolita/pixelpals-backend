@@ -10,9 +10,9 @@ class ReportSerializer(serializers.ModelSerializer):
     """
     Serializer for the Report model. 
     """
-    owner = serializers.ReadOnlyField(source='owner.username')
-    profile_id = serializers.ReadOnlyField(source="owner.profile.id")
-    profile_image = serializers.ReadOnlyField(source="owner.profile.image.url")
+    submitter = serializers.ReadOnlyField(source='submitter.username')
+    profile_id = serializers.ReadOnlyField(source="submitter.profile.id")
+    profile_image = serializers.ReadOnlyField(source="submitter.profile.image.url")
     class Meta:
         """
         Meta class to define the model and fields to be serialized.
@@ -20,7 +20,7 @@ class ReportSerializer(serializers.ModelSerializer):
         model = Report
         fields = [
             'id', 
-            'owner',
+            'submitter',
             'reason',
             'content',
             "profile_id",
@@ -28,4 +28,3 @@ class ReportSerializer(serializers.ModelSerializer):
             'created_at',
             'updated_at',
         ]
-        
