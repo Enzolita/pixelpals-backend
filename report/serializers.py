@@ -28,3 +28,4 @@ class ReportSerializer(serializers.ModelSerializer):
             'created_at',
             'updated_at',
         ]
+        
