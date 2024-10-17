@@ -12,7 +12,7 @@ class Report(models.Model):
     Each report has a submitter, reason, content, status,
     and timestamps for creation and last update.
     """
-    submitter = models.ForeignKey(User, on_delete=models.CASCADE)
+    owner = models.ForeignKey(User, on_delete=models.CASCADE)
     reason = models.CharField(max_length=50)
     content = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
@@ -26,4 +26,4 @@ class Report(models.Model):
         Returns a string representation of the report, combining 
         the submitter's username, reason, and status.
         """
-        return f'{self.submitter} : {self.reason}'
+        return f'{self.owner} : {self.reason}'
