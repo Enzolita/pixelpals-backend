@@ -269,3 +269,45 @@ Create a new workspace in your preferred IDE, in our case it was [Gitpod](https:
   - Once built a message will appear saying: Your app was successfully deployed. 
   - Click the view button to view the deployed page making a note of it's url.
 </details>
+
+### Github
+
+<details>
+<summary>How to Clone the Repository</summary>
+<br>
+
+Cloning a GitHub repository creates a local copy on your machine, allowing you to sync between the two locations. Here are the steps:
+<br>
+
+- Log in (or sign up) to GitHub.
+- Navigate to the GitHub Repository you want to clone to use locally.
+- Click on the code button
+- Select whether you would like to clone with HTTPS, SSH or GitHub CLI and copy repository link to the clipboard.
+- Open the terminal in your code editor of choice (git must be installed for the nextcoming steps)
+- Change the current working directory to the location you want to use for the cloned directory.
+- Type 'git clone' into the terminal and then paste the link you copied previously. Press enter.
+- If you are working in VSCode, create a virtual environment with command: `python3 -m venv .venv` 
+- Agree to select as workspace folder. 
+- Move to the virtual environment with command: `source .venv/bin/activate`
+- Import all dependencies with command: `pip3 install -r requirements.txt`
+- Create an 'env.py' file in the main directory.
+- Enter key data, such as: SECRET_KEY, CLIENT_ORIGIN_DEV, CLOUDINARY_URL, DATABASE_URL and ['DEV'] = '1'
+- Check that both the virtual environment and env.py are named in the .gitignore file.
+- Check it's all working by running the server, use command: `python3 manage.py runserver`
+ </details>
+<br>
+
+<details>
+<summary>How to Fork the Repository</summary>
+<br>
+
+Most commonly, forks are used to either propose changes to someone else's project or to use someone else's project as a starting point for your own idea. In order to protect the main branch while you work on something new, essential when working as part of a team or when you want to experiment with a new feature, you will need to fork a branch.
+<br>
+
+- Log in (or sign up) to Github.
+- Go to the selected repository.
+- Click the Fork button in the top right corner and select create a fork.
+- One can change the name of the fork and add description
+- Choose to copy only the main branch or all branches to the new fork.
+- Click Create a Fork. A repository should appear in your GitHub
+</details>
