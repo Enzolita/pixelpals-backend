@@ -85,3 +85,44 @@ In the development environment, Pixelpals uses SQLite, which is simple to set up
 The Entity-Relationship Diagram (ERD) provides a visual representation of the database's structure. It helps in planning and illustrating the SQL tables and the relationships between them. The ERD is an essential part of the database design that shows the entities, their attributes, and the types of relationships among the entities.
 
 ![erd](/documentation/readme-image/erd.webp)
+
+**Relationships**
+
+
+1. User
+  - One-to-One: User.id → Profile.owner
+  - One-to-Many: User.id → Post.owner
+  - One-to-Many: User.id → Comment.owner
+  - Many-to-Many (through Follower): User.id → Follower.owner
+  - Many-to-Many (through Follower): User.id → Follower.followed
+  - Many-to-Many (through Like): User.id → Like.owner
+  - One-to-Many: User.id → Contact.owner
+  - One-to-Many: User.id → Block.owner
+  - One-to-Many: User.id → Block.target
+
+2. Profile
+  - One-to-One: Profile.owner → User.id
+
+3. Post
+  - Many-to-One: Post.owner → User.id
+  - One-to-Many: Post.id → Comment.post
+  - Many-to-Many (through Like): Post.id → Like.post
+  - Many-to-Many: Post.id → Hashtag.post
+  - Many-to-One: Post.category → Category.id
+
+4. Comment
+  - Many-to-One: Comment.owner → User.id
+  - Many-to-One: Comment.post → Post.id
+
+5. Like
+  - Many-to-One: Like.owner → User.id
+  - Many-to-One: Like.post → Post.id
+
+6. Follower
+  - Many-to-One: Follower.owner → User.id
+  - Many-to-One: Follower.followed → User.id
+
+8. Report
+  - Many-to-One: Report.owner → User.id
+
+</details>
