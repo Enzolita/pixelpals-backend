@@ -1,5 +1,5 @@
-# Customized to cater for report management functionality. This module
-# defines the views for the Report model. It includes views for listing
+#This module defines the views for the Report model.
+# It includes views for listing
 # and creating reports, as well as retrieving, updating, and deleting
 # individual report instances.
 

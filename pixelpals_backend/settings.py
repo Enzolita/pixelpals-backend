@@ -47,7 +47,6 @@ JWT_AUTH_SECURE = True
 JWT_AUTH_COOKIE = 'my-app-auth'
 JWT_AUTH_REFRESH_COOKIE = 'my-refresh-token'
 JWT_AUTH_SAMESITE = 'None'
-
 REST_AUTH_SERIALIZERS = {
     'USER_DETAILS_SERIALIZER': 'pixelpals_backend.serializers.CurrentUserSerializer'
 }
@@ -98,7 +97,6 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'dj_rest_auth.registration',
     'corsheaders',
-
     'profiles',
     'posts',
     'comments',
