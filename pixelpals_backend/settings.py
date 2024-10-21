@@ -58,7 +58,6 @@ REST_AUTH_SERIALIZERS = {
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-#DEBUG = 'DEV' in os.environ
 
 DEBUG = True
 
@@ -164,13 +163,11 @@ WSGI_APPLICATION = 'pixelpals_backend.wsgi.application'
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
-     
+
 
 CSRF_TRUSTED_ORIGINS = [
     'https://8000-enzolita-pixelpalsbacke-fagxslbmqhy.ws.codeinstitute-ide.net',
 ]
-
-
 
 
 # Password validation
@@ -204,8 +201,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
-#CORS SETTINGS
 
 
 # Static files (CSS, JavaScript, Images)
