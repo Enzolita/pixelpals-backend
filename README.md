@@ -222,3 +222,50 @@ The following git commands were used throughout development to push code to the 
 - `git commit -m “commit message”` - This command was used to commit changes to the local repository queue ready for the final step.
 - `git push` - This command was used to push all committed code to the remote repository on github.
 </details>
+
+### Heroku
+
+ <details>
+ <summary>To deploy the project to Heroku, I took the following steps</summary>
+ <br>
+
+Create a new workspace in your preferred IDE, in our case it was [Gitpod](https://www.gitpod.io/docs/introduction/getting-started), and set up the new drf-api project. Use [Django REST framwork](https://www.django-rest-framework.org/) guide. 
+
+**Project Settings**
+
+- Include https://<your_app_name>.herokuapp.com in the ALLOWED_HOSTS and CSRF_TRUSTED_ORIGINS lists inside the settings.py file.
+- Make sure that the environment variables (DATABASE_URL, SECRET_KEY, and CLOUDINARY_URL) are correctly set to os.environ.get("<variable_name>")
+- If making changes to static files or apps, make sure to run collectstatic or migrate as needed.
+- Commit and push to the repository.
+
+**Requirements**
+
+- Create a plain file called Procfile without any file suffix, at the root level of the project.
+  - Add to the Procfile and save.
+    - `release: python manage.py makemigrations && python manage.py migrate`
+    - `web: gunicorn drf_api.wsgi`
+- In your IDE terminal, type pip3 freeze local > requirements.txt to create the requirements.
+- (Optional) Create a runtime.txt and type python-3.11.9 (or whichever version you use)
+- Commit and push these files to the project repository.
+
+ **Deployment to Heroku**
+
+- In your heroku account, select New and then Create New App.
+- Give it a unique name related to your project, choose the correct region for where you are located.
+- Create app
+- Goto 'Settings' tab and the Config Vars. For Heroku to be able to process and render the project, you must define some environment variables:
+  - Add DATABASE_URL variable and assign it a link to your database
+  - Add SECRET_KEY variable and assign it a secret key of your choice
+  - Add CLOUDINARY_URL variable and assign it a link to your Cloudinary
+  - Add ALLOWED_HOST variable and assign it the url of the deployed heroku link
+  - Add CLIENT_ORIGIN variable and assign it the url of your deployed frontend app
+  - Add CLIENT_ORIGIN_DEV variable and assign it the url of your local development client
+
+- Continue to the 'Deploy' tab. 
+  - Select GitHub as the 'deployment method'.
+  - Confirm connection to git hub by searching for the correct repository and then connecting to it.
+  - To manually deploy project click 'Deploy Branch'. 
+      - Don't forget to ensure Debug is false for final deployment
+  - Once built a message will appear saying: Your app was successfully deployed. 
+  - Click the view button to view the deployed page making a note of it's url.
+</details>
