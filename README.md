@@ -311,3 +311,33 @@ Most commonly, forks are used to either propose changes to someone else's projec
 - Choose to copy only the main branch or all branches to the new fork.
 - Click Create a Fork. A repository should appear in your GitHub
 </details>
+
+## Credits
+
+<details>
+<summary>Content</summary>
+<br>
+
+Throughout the development of Pixelpals, a variety of resources have been utilized to ensure the platform is robust, user-friendly, and engaging. Below is a list of key documentation, blogs, tutorials, and guides that have been instrumental in crafting the backend functionality:
+
+- **Bootstrap**: Extensively used for styling and responsive design, making the site accessible on a variety of devices - [Bootstrap documentation](https://getbootstrap.com/).
+- **Django**: As the backbone of our platform, Django's comprehensive documentation has been crucial for backend development - [Django documentation](https://docs.djangoproject.com/en/4.2/).
+
+- **Sources of inspiration and guidance in general**:
+  - This resources is only available to enrolled students at The Code Institute:
+    - The Code Institute Diploma in Full Stack Software Development (Advanced Front-End) Walk-through project Django REST framework (backend)
+  - **Testing inspiration**: is listed in [Pixelpals-Frontend README](https://github.com/Enzolita/pixelpals-pp5/blob/main/README.md#content)
+</details>
+<br>
+
+<details>
+<summary>Acknowledgement</summary>
+<br>
+
+Please see the [frontend README](https://github.com/Enzolita/pixelpals-pp5/blob/main/README.md).
+</details>
+<br>
+
+*<span style="color: blue;">[Back to Content](#table-of-contents)</span>*    
+
+[To frontend README](https://github.com/Enzolita/pixelpals-pp5/blob/main/README.md)
