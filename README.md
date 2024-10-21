@@ -126,3 +126,19 @@ The Entity-Relationship Diagram (ERD) provides a visual representation of the da
   - Many-to-One: Report.owner → User.id
 
 </details>
+
+### Database Schema
+
+<details>
+
+<summary>Data Flow</summary>
+<br>
+
+To follow best practice, a flowchart was created for the app's logic, and mapped out before coding began using a free version of Draw.io. Please note, that the flowchart provided is designed to offer a simplified visual overview of the application's core workflow. While it captures the essential operations and user interactions, some implementation details and error-handling mechanisms are abstracted for clarity. The actual application logic may involve additional steps and checks not depicted in the flowchart.
+
+![Data Flow](/documentation/readme-image/flowchart.webp)
+
+</details>
+<br>
+
+*<span style="color: blue;">[Back to Content](#table-of-contents)</span>*
