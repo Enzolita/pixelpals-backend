@@ -142,3 +142,65 @@ To follow best practice, a flowchart was created for the app's logic, and mapped
 <br>
 
 *<span style="color: blue;">[Back to Content](#table-of-contents)</span>*
+
+## Technologies
+
+<details>
+<summary>Language</summary>
+<br>
+
+- [Python](https://www.python.org/) serves as the back-end programming language.
+
+</details>
+<br>
+
+<details>
+<summary>Frameworks, libraries and dependencies used in the backend part of the project.</summary>
+<br>
+
+- [asgiref==3.8.1](https://pypi.org/project/asgiref/) ASGI is a standard for Python asynchronous web apps and servers to communicate with each other, and positioned as an asynchronous successor to WSGI.
+- [cloudinary==1.41.0](https://pypi.org/project/cloudinary/) allows you to quickly and easily integrate your application with Cloudinary.
+- [dj-database-url==0.5.0](https://pypi.org/project/dj-database-url/0.5.0/) This simple Django utility allows you to utilize the 12factor inspired DATABASE_URL environment variable to configure your Django application.
+- [dj-rest-auth==2.1.9](https://dj-rest-auth.readthedocs.io/en/2.1.9/) a set of REST API endpoints to handle User Registration and Authentication tasks.
+- [Django==4.2](https://docs.djangoproject.com/en/4.2/) Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design.
+- [django-allauth==0.50.0](https://docs.allauth.org/en/latest/) Integrated set of Django applications addressing authentication, registration, account management as well as 3rd party (social) account authentication.
+- [django-cloudinary-storage==0.3.0](https://pypi.org/project/django-cloudinary-storage/0.3.0/) Django Cloudinary Storage is a Django package that facilitates integration with Cloudinary by implementing Django Storage API.
+- [django-cors-headers==4.4.0](https://pypi.org/project/django-cors-headers/) is a Django application for handling the server headers required for Cross-Origin Resource Sharing (CORS).
+- [django-filter==2.4.3](https://pypi.org/project/django-filter/2.4.0/) django-filter is a reusable Django application for allowing users to filter querysets dynamically.
+- [djangorestframework==3.15.2](https://pypi.org/project/djangorestframework/) is a powerful and flexible toolkit for building Web APIs.
+- [djangorestframework-simplejwt==5.3.1](https://pypi.org/project/djangorestframework-simplejwt/) A minimal JSON Web Token authentication plugin for Django REST Framework.
+- [gunicorn==23.0.0](https://pypi.org/project/gunicorn/) is a Python WSGI HTTP Server for UNIX.
+- [oauthlib==3.2.2](https://pypi.org/project/oauthlib/3.2.2/) is a generic, spec-compliant, thorough implementation of the OAuth request-signing logic.
+- [Pillow==10.4.0](https://pypi.org/project/pillow/10.4.0/) The Python Imaging Library enhances your Python interpreter with extensive file format support, efficient data representation, and powerful image processing capabilities.
+- [psycopg2==2.9.9](https://pypi.org/project/psycopg2/) PostgreSQL database adapter for the Python programming language. The stand-alone binary package was chosen due to the normal psycopg2 throwing errors.
+- [PyJWT==2.9.0](https://pypi.org/project/PyJWT/2.9.0/) JSON Web Token implementation in Python.
+- [python3-openid==3.2.0](https://pypi.org/project/python3-openid/) OpenID support for modern servers and consumers.
+- [pytz==2024.2](https://pypi.org/project/pytz/2024.2/) allows accurate and cross platform timezone calculations.
+- [requests-oauthlib==2.0.0](https://pypi.org/project/requests-oauthlib/2.0.0/) provides first-class OAuth library support for Requests.
+- [setuptools==68.0.0](https://pypi.org/project/setuptools/68.0.0/) is a Python library that helps developers package and distribute Python projects. It provides tools to package Python code so it can be easily installed and used by others, either by sharing the package on the Python Package Index (PyPI) or installing it locally.
+- [sqlparse==0.5.1](https://pypi.org/project/sqlparse/0.5.1/) sqlparse is a non-validating SQL parser for Python. It provides support for parsing, splitting and formatting SQL statements.
+</details>
+<br>
+
+<details>
+<summary>Tools and Services</summary>
+<br>
+
+- [Code Institute Python Linter](https://pep8ci.herokuapp.com/) a tool to check Python code against some of the style conventions in PEP8.
+- [Code Institute Template](https://github.com/Code-Institute-Org/ci-full-template) provided me with a familiar base from which to build my project.
+- [Diffchecker](https://www.diffchecker.com/text-compare/) is used to check code snippets.
+- [Draw.io](https://www.drawio.com/) is useful for planning the application's architecture and flowcharts, especially helpful in the design phase to visualize the application flow.
+- [Git](https://git-scm.com/) is used for version control.
+- [Gitpod](https://gitpod.io/) streamlines your development process by providing a pre-configured, cloud-based development environment that's instantly ready for coding.
+- [Github](https://github.com/) is essential for version control, allowing you to track changes, collaborate with others (if applicable), and secure online code storage.
+- [Google Dev Tools](https://developers.google.com/web/tools) is used during testing, debugging and styling.
+- [Heroku](https://www.heroku.com/) is a platform for deploying and hosting web applications.
+- [Lucidchart](https://www.lucidchart.com/) is used for ERD (entity relationship diagram)
+- [PEP8](https://peps.python.org/pep-0008/) a style guide for Python code.
+- [PostgreSQL](https://dbs.ci-dbs.net/) provided by the Code Institute, is employed as the database system for its robustness and compatibility with Django.
+
+</details>
+<br>
+
+*<span style="color: blue;">[Back to Content](#table-of-contents)</span>*
+
