@@ -204,3 +204,21 @@ To follow best practice, a flowchart was created for the app's logic, and mapped
 
 *<span style="color: blue;">[Back to Content](#table-of-contents)</span>*
 
+## Testing and Issues
+
+Information about how the project was tested & Issues encountered, please refer to the [pixelpals-frontend repository, TESTING.md](https://github.com/Enzolita/pixelpals-pp5/blob/main/TESTING.md)
+
+*<span style="color: blue;">[Back to Content](#table-of-contents)</span>*
+
+## Deployment
+
+<details>
+<summary>Version Control</summary>
+<br>
+The site was created using the Gitpod editor and pushed to github to the remote repository ‘pixelpals-frontend’.
+The following git commands were used throughout development to push code to the remote repo:
+
+- `git add <file>` - This command was used to add the file(s) to the staging area before they are committed.
+- `git commit -m “commit message”` - This command was used to commit changes to the local repository queue ready for the final step.
+- `git push` - This command was used to push all committed code to the remote repository on github.
+</details>
